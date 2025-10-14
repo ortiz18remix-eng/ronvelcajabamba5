@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Estación de Servicios Ronvel S.A.C</title>
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@600;700;800&family=Merriweather:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --azul: #0077b6;
+      --amarillo: #ffd60a;
+      --texto-claro: #f3f6f9;
+    }
+
+    *{ box-sizing: border-box; margin:0; padding:0; }
+    html{ scroll-behavior: smooth; }
+    body{
+      font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      line-height: 1.6;
+      background: #f8fafc;
+      color: #1d2430;
+    }
+
+    /* NAVBAR */
+    nav{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      padding: 0 20px;
+      background: rgba(7,12,18,0.92);
+      z-index: 1100;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      backdrop-filter: blur(4px);
+    }
+
+    /* Logo */
+    .logo-nav {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 42px;
+      width: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease;
+    }
+    .logo-nav:hover{
+      transform: translateY(-50%) scale(1.08);
+    }
+
+    /* Enlaces */
+    .nav-links{
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links a{
+      color: var(--texto-claro);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 10px;
+      transition: transform .14s ease, background .18s ease, color .18s ease;
+      letter-spacing: .2px;
+    }
+    .nav-links a:hover{
+      background: rgba(255,255,255,0.06);
+      color: var(--amarillo);
+      transform: translateY(-2px);
+    }
+
+    /* Botón hamburguesa */
+    .menu-toggle{
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+    .menu-toggle span{
+      width: 28px;
+      height: 3px;
+      background: var(--texto-claro);
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    /* HERO */
+    .hero{
+      
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+      background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url('images/logotipo.jpg') no-repeat center center/cover;
+      color: white;
+      margin-top: 64px;
+      
+      
+      
+    }
+    .hero-text{ position: relative; z-index: 2; max-width: 1100px; }
+    
+
+    /* Nuevo estilo para el título */
+    .titulo-ronvel{
+      font-family: 'Merriweather', serif;
+      font-size: clamp(2.8rem, 6vw, 4rem);
+      font-weight: 700;
+      margin-bottom: 18px;
+      letter-spacing: 1.5px;
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 10px;
+      background: rgba(0,0,0,0.35); 
+      color: #ffdf4d;
+      text-shadow: 0 6px 22px rgba(0,0,0,0.55);
+      animation: titleIn .9s ease forwards;
+      opacity: 0;
+      border: 2px solid rgba(255,214,10,0.85);
+    }
+
+    .subtitulo-ronvel{
+      font-family: "Poppins", sans-serif;
+      font-size: clamp(1.05rem, 2.4vw, 1.4rem);
+      font-weight: 400;
+      color: rgba(245,245,245,0.92);
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      border-radius: 10px;
+      background: rgba(0,0,0,0.35);
+      text-shadow: 0 5px 16px rgba(0,0,0,0.6);
+      animation: subtitleIn 1.2s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes titleIn {
+      from { opacity: 0; transform: translateY(-18px) scale(.96); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes subtitleIn {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* SECCIONES */
+    section{
+      padding: 90px 20px;
+      text-align: center;
+      scroll-margin-top: 90px;
+    }
+    section h2{
+      font-size: 2.2rem;
+      margin-bottom: 28px;
+      color: var(--azul);
+      font-weight: 700;
+      display: inline-block;
+      transition: all .3s ease;
+    }
+    section h2:hover{
+      color: var(--amarillo);
+      transform: scale(1.05);
+      text-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    }
+
+    .bg-elegante{
+      position: relative;
+      color: var(--texto-claro);
+      background: url('images/foto2.jpg') no-repeat center center/cover;
+      overflow: hidden;
+    }
+    .bg-elegante::before{
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(8,12,18,0.88);
+      z-index: 0;
+    }
+    .bg-elegante > *{ position: relative; z-index: 1; }
+
+    /* ----------- NOSOTROS ----------- */
+    .nosotros{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 36px;
+      flex-wrap: wrap;
+    }
+    .nosotros img{
+      width: 380px;
+      height: 260px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 14px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.55);
+
+      /* animación */
+      opacity: 0;
+      transform: scale(0.9) translateY(40px);
+      transition: all 0.9s ease;
+
+      /* marco elegante */
+      border: 3px solid rgba(255, 215, 0, 0.7);
+      outline: 2px solid rgba(255, 255, 255, 0.25);
+      outline-offset: -6px;
+    }
+    .nosotros img.show{
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+    .nosotros p{
+      max-width: 540px;
+      font-size: 1.08rem;
+      text-align: justify;
+      line-height: 1.7;
+      color: #e8edf3;
+    }
+
+    /* SERVICIOS */
+    .servicios{
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+    .servicio{
+      width: 260px;
+      padding: 22px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+      backdrop-filter: blur(6px);
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+    .servicio{
+  width: 260px;
+  padding: 22px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.servicio:hover{
+  transform: translateY(-8px) scale(1.03); /* ligero zoom + elevación */
+  box-shadow: 0 20px 46px rgba(0,0,0,0.55);
+  background: rgba(255,255,255,0.12); /* cambio de fondo más visible */
+}
+
+.servicio img{
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.servicio:hover img{
+  transform: scale(1.05); /* imagen también hace un pequeño zoom al pasar el mouse */
+}
+
+.servicio h3{
+  margin-bottom: 8px;
+  color: var(--amarillo);
+  transition: color 0.3s ease;
+}
+
+.servicio:hover h3{
+  color: #ffd60a; /* cambia ligeramente el tono del título al hover */
+}
+
+.servicio p{
+  color: #e8edf3;
+}
+
+.precio{
+  margin-top: 10px;
+  font-weight: 700;
+  color: #ffb703;
+}
+
+
+    /* CONTACTO */
+    .contacto p{ margin: 8px 0; color: #e8edf3; font-size: 1.03rem; }
+    .contacto .direccion a{ color: #fff; text-decoration: underline; font-weight: 600; }
+
+    .redes{ margin-top: 18px; }
+    .redes h3{ color: var(--amarillo); margin-bottom: 14px; font-size: 1.3rem; }
+
+    /* Redes sociales mejoradas */
+    .redes a{
+      display: inline-block;
+      text-decoration: none;
+      padding: 12px 22px;
+      margin: 8px;
+      border-radius: 50px;
+      font-weight: 700;
+      color: white;
+      font-size: 1rem;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s ease;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    }
+    .redes a::before{
+      content: "";
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: rgba(255,255,255,0.2);
+      transition: all 0.35s ease;
+    }
+    .redes a:hover::before{
+      left: 0;
+    }
+    .redes a:hover{
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    }
+    .facebook{ background: linear-gradient(45deg, #1877f2, #3b5998); }
+    .whatsapp{ background: linear-gradient(45deg, #25d366, #128c7e); }
+
+    /* FOOTER */
+    footer{
+      background: rgba(7,12,18,0.95);
+      color: #fff;
+      text-align: center;
+      padding: 18px 12px;
+    }
+
+    /* Responsive */
+    @media (max-width: 880px){
+      .nosotros{ gap: 18px; padding: 10px; }
+      .servicio{ width: 90%; max-width: 420px; }
+    }
+    @media (max-width:768px){
+      nav{
+        justify-content: space-between;
+      }
+      .nav-links{
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: rgba(7,12,18,0.95);
+        padding: 10px 0;
+      }
+      .nav-links.active{
+        display: flex;
+      }
+      .nav-links a{
+        margin: 10px 0;
+        text-align: center;
+      }
+      .menu-toggle{
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+      }
+      .menu-toggle span{
+        width: 28px;
+        height: 3px;
+        background: var(--texto-claro);
+        border-radius: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <!-- Logo -->
+    <a href="#inicio"><img src="images/ip.png" alt="Logo Ronvel" class="logo-nav"></a>
+    
+    <!-- Botón hamburguesa -->
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Enlaces -->
+    <div class="nav-links" id="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="hero-text">
+      <h1 class="titulo-ronvel">Estación de Servicios Ronvel S.A.C</h1>
+      <p class="subtitulo-ronvel">Combustible de confianza, calidad certificada y atención rápida para tu vehículo</p>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section id="nosotros" class="bg-elegante">
+    <h2>Nosotros</h2>
+    <div class="nosotros">
+      <img src="images/foto4.jpg" alt="Estación Ronvel">
+      <p>En <strong>Estación de Servicio Ronvel S.A.C</strong> nos dedicamos a brindar combustibles de la más alta calidad, garantizando seguridad, confianza y atención rápida para todos nuestros clientes.  
+      Nuestra misión es mantener a Cajamarca en movimiento con energía limpia, eficiente y accesible.</p>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="bg-elegante">
+    <h2>Servicios</h2>
+    <div class="servicios">
+      <div class="servicio">
+        <img src="images/verde.jpg" alt="G-Regular">
+        <h3>G-Regular</h3>
+        <p>Gasolina confiable con aditivos que optimizan el motor y protegen tu vehículo en cada kilómetro.</p>
+        <div class="precio">S/ 16.99 por galón</div>
+      </div>
+      <div class="servicio">
+        <img src="images/azul.jpg" alt="G-Prix">
+        <h3>G-Prix</h3>
+        <p>Gasolina premium con formulación especial para potencia superior y óptimo desempeño en motores exigentes.</p>
+        <div class="precio">S/ 18.50 por galón</div>
+      </div>
+      <div class="servicio">
+        <img src="images/negra.jpg" alt="Max-D">
+        <h3>Max-D</h3>
+        <p>Diésel de última tecnología que mejora la combustión, cuida los inyectores y asegura potencia con menor consumo y emisiones.</p>
+        <div class="precio">S/ 16.99 por galón</div>
+      </div>
+     
+      <!-- Nuevo servicio Minimarket -->
+      <div class="servicio">
+        <img src="images/mini.png" alt="Minimarket">
+        <h3>Minimarket</h3>
+        <p>Disfruta de un minimarket completo con snacks, bebidas frías, productos de primera necesidad y todo lo que hará tu viaje más cómodo y placentero.</p>
+        <div class="precio">Variedad de precios</div>
+      </div>
+
+      <!-- Nuevo servicio Lavado -->
+      <div class="servicio">
+        <img src="images/agua.jpg" alt="Lavado de autos">
+        <h3>Lavado de Autos</h3>
+        <p>Deja tu auto como nuevo con nuestro lavado rápido, brillante y detallado que resalta cada parte de tu vehículo.</p>
+        <div class="precio">GRATIS</div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contacto bg-elegante">
+    <h2>Contacto</h2>
+   <p class="direccion">
+  <strong>Dirección:</strong> 
+  <a href="https://maps.app.goo.gl/YEZAvnAZZ2j4PTA39" 
+     target="_blank" 
+     style="text-decoration:none; color:#ffffff; font-weight:600;">
+    Av. Principal 123, Cajabamba - Perú
+  </a>
+</p>
+
+    <p><strong>Teléfono:</strong> +51 918735</p>
+    <p><strong>Email:</strong> contacto@ronvelsan.com</p>
+    <div class="redes">
+      <h3>Síguenos en:</h3>
+      <a class="facebook" href="https://www.facebook.com/profile.php?id=100057400843223" target="_blank">Facebook</a>
+      <a class="whatsapp" href="https://wa.me/51987654321" target="_blank">WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Estación de servicios Ronvel S.A.C - Todos los derechos reservados</p>
+  </footer>
+
+  <!-- Script menú hamburguesa -->
+<!-- Script menú hamburguesa -->
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  // Abrir/cerrar menú al hacer clic en el ícono
+  menuToggle.addEventListener("click", (e) => {
+    e.stopPropagation(); // Evita que el clic se propague al document
+    navLinks.classList.toggle("active");
+  });
+
+  // Cerrar el menú si se hace clic fuera de él
+  document.addEventListener("click", (e) => {
+    // Si el menú está abierto y el clic no es sobre el menú ni sobre el toggle
+    if (navLinks.classList.contains("active") && 
+        !navLinks.contains(e.target) &&
+        e.target !== menuToggle) {
+      navLinks.classList.remove("active");
+    }
+  });
+
+// Animación imagen "Nosotros"
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.3 });
+
+    const imgNosotros = document.querySelector(".nosotros img");
+    observer.observe(imgNosotros);
+  </script>
+
+
+</body>
+</html>
+

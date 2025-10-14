@@ -1,0 +1,106 @@
+Jun 10 18:02:36.387 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Jun 10 18:02:36.387 HYPERVISOR: Started on IP = localhost, TCP port = 51207.
+Jun 10 18:02:36.877 HYPERVISOR: exec_cmd: hypervisor version 
+Jun 10 18:02:36.877 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\ORTIZ\GNS3\projects\IPV6_LuisOrtiz\project-files\dynamips 
+Jun 10 18:02:36.877 GENERAL: working_dir=C:\Users\ORTIZ\GNS3\projects\IPV6_LuisOrtiz\project-files\dynamips
+Jun 10 18:02:36.877 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\ORTIZ\GNS3\projects\IPV6_LuisOrtiz\project-files\dynamips\35502c3e-3353-4f28-88ae-82149f753561 
+Jun 10 18:02:36.877 GENERAL: working_dir=C:\Users\ORTIZ\GNS3\projects\IPV6_LuisOrtiz\project-files\dynamips\35502c3e-3353-4f28-88ae-82149f753561
+Jun 10 18:02:36.877 HYPERVISOR: exec_cmd: vm create R2 2 c3600 
+Jun 10 18:02:36.887 VM: VM R2 created.
+Jun 10 18:02:36.887 HYPERVISOR: exec_cmd: vm set_con_tcp_port R2 5001 
+Jun 10 18:02:36.892 HYPERVISOR: exec_cmd: c3600 get_mac_addr R2 
+Jun 10 18:02:36.893 HYPERVISOR: exec_cmd: vm set_ios R2 C:/Users/ORTIZ/GNS3/images/IOS/c3640-ik9s-mz.124-16.image 
+Jun 10 18:02:36.893 HYPERVISOR: exec_cmd: vm set_exec_area R2 64 
+Jun 10 18:02:36.897 HYPERVISOR: exec_cmd: vm set_ram R2 192 
+Jun 10 18:02:36.897 HYPERVISOR: exec_cmd: vm set_nvram R2 256 
+Jun 10 18:02:37.007 HYPERVISOR: exec_cmd: vm set_ios R2 C:/Users/ORTIZ/GNS3/images/IOS/c3640-ik9s-mz.124-16.image 
+Jun 10 18:02:39.482 HYPERVISOR: exec_cmd: vm set_ios R2 C:/Users/ORTIZ/GNS3/images/IOS/c3640-ik9s-mz.124-16.image 
+Jun 10 18:14:54.170 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Jun 10 18:14:54.170 HYPERVISOR: exec_cmd: vm set_ghost_file R2 C:\Users\ORTIZ\GNS3\projects\IPV6_LuisOrtiz\project-files\dynamips\c3640-ik9s-mz.124-16.image-192.ghost 
+Jun 10 18:14:54.170 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:14:54.181 HYPERVISOR: exec_cmd: vm set_config R2 configs\i2_startup-config.cfg 
+Jun 10 18:14:54.181 HYPERVISOR: exec_cmd: vm start R2 
+Jun 10 18:15:02.190 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Jun 10 18:15:02.190 HYPERVISOR: exec_cmd: vm set_ghost_file R2 C:\Users\ORTIZ\GNS3\projects\IPV6_LuisOrtiz\project-files\dynamips\c3640-ik9s-mz.124-16.image-192.ghost 
+Jun 10 18:15:02.200 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:15:09.028 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Jun 10 18:15:09.028 HYPERVISOR: exec_cmd: vm set_ghost_file R2 C:\Users\ORTIZ\GNS3\projects\IPV6_LuisOrtiz\project-files\dynamips\c3640-ik9s-mz.124-16.image-192.ghost 
+Jun 10 18:15:09.028 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:15:17.346 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Jun 10 18:15:17.361 HYPERVISOR: exec_cmd: vm set_ghost_file R2 C:\Users\ORTIZ\GNS3\projects\IPV6_LuisOrtiz\project-files\dynamips\c3640-ik9s-mz.124-16.image-192.ghost 
+Jun 10 18:15:17.361 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:15:24.533 HYPERVISOR: exec_cmd: vm extract_config R2 
+Jun 10 18:15:25.365 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:15:25.365 HYPERVISOR: exec_cmd: vm stop R2 
+Jun 10 18:15:25.506 VM: VM R2 shutdown.
+Jun 10 18:15:25.506 HYPERVISOR: exec_cmd: vm extract_config R2 
+Jun 10 18:15:27.855 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Jun 10 18:15:27.870 HYPERVISOR: exec_cmd: vm set_ghost_file R2 C:\Users\ORTIZ\GNS3\projects\IPV6_LuisOrtiz\project-files\dynamips\c3640-ik9s-mz.124-16.image-192.ghost 
+Jun 10 18:15:27.870 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:15:27.870 HYPERVISOR: exec_cmd: vm set_config R2 configs\i2_startup-config.cfg 
+Jun 10 18:15:27.886 HYPERVISOR: exec_cmd: vm start R2 
+Jun 10 18:17:04.932 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:17:04.932 HYPERVISOR: exec_cmd: vm suspend R2 
+Jun 10 18:17:07.315 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Jun 10 18:17:07.315 HYPERVISOR: exec_cmd: vm set_ghost_file R2 C:\Users\ORTIZ\GNS3\projects\IPV6_LuisOrtiz\project-files\dynamips\c3640-ik9s-mz.124-16.image-192.ghost 
+Jun 10 18:17:07.315 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:17:07.331 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:17:07.331 HYPERVISOR: exec_cmd: vm resume R2 
+Jun 10 18:21:55.449 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:21:55.449 HYPERVISOR: exec_cmd: vm stop R2 
+Jun 10 18:21:55.586 VM: VM R2 shutdown.
+Jun 10 18:21:55.590 HYPERVISOR: exec_cmd: vm extract_config R2 
+Jun 10 18:21:55.622 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Jun 10 18:21:55.626 HYPERVISOR: exec_cmd: vm set_ghost_file R2 C:\Users\ORTIZ\GNS3\projects\IPV6_LuisOrtiz\project-files\dynamips\c3640-ik9s-mz.124-16.image-192.ghost 
+Jun 10 18:21:55.626 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:21:55.638 HYPERVISOR: exec_cmd: vm set_config R2 configs\i2_startup-config.cfg 
+Jun 10 18:21:55.638 HYPERVISOR: exec_cmd: vm start R2 
+Jun 10 18:21:58.766 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Jun 10 18:21:58.766 HYPERVISOR: exec_cmd: vm set_ghost_file R2 C:\Users\ORTIZ\GNS3\projects\IPV6_LuisOrtiz\project-files\dynamips\c3640-ik9s-mz.124-16.image-192.ghost 
+Jun 10 18:21:58.770 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:23:55.852 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:23:55.852 HYPERVISOR: exec_cmd: vm stop R2 
+Jun 10 18:23:55.928 VM: VM R2 shutdown.
+Jun 10 18:23:55.932 HYPERVISOR: exec_cmd: vm extract_config R2 
+Jun 10 18:25:34.564 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:25:34.564 HYPERVISOR: exec_cmd: vm slot_add_binding R2 0 0 NM-4E 
+Jun 10 18:25:34.564 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:25:34.564 HYPERVISOR: exec_cmd: vm slot_add_binding R2 1 0 NM-4E 
+Jun 10 18:26:15.908 HYPERVISOR: exec_cmd: nio create_udp udp-cfd637da-8f9f-44f2-afc0-6868038cecad 10004 127.0.0.1 10005 
+Jun 10 18:26:16.222 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 1 udp-cfd637da-8f9f-44f2-afc0-6868038cecad 
+Jun 10 18:26:16.222 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:26:27.550 HYPERVISOR: exec_cmd: nio create_udp udp-ceffd472-d739-4ed2-84f1-589f1ea02995 10008 127.0.0.1 10009 
+Jun 10 18:26:27.566 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 2 udp-ceffd472-d739-4ed2-84f1-589f1ea02995 
+Jun 10 18:26:27.566 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:28:26.943 HYPERVISOR: exec_cmd: nio create_udp udp-eb0fef39-2c31-4322-b8b7-03baa129b332 10016 127.0.0.1 10017 
+Jun 10 18:28:26.959 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 0 udp-eb0fef39-2c31-4322-b8b7-03baa129b332 
+Jun 10 18:28:26.959 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:28:31.589 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:28:31.589 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding R2 0 1 
+Jun 10 18:28:31.589 HYPERVISOR: exec_cmd: nio delete udp-cfd637da-8f9f-44f2-afc0-6868038cecad 
+Jun 10 18:28:34.300 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:28:34.300 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding R2 0 0 
+Jun 10 18:28:34.300 HYPERVISOR: exec_cmd: nio delete udp-eb0fef39-2c31-4322-b8b7-03baa129b332 
+Jun 10 18:28:36.070 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:28:36.070 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding R2 0 2 
+Jun 10 18:28:36.070 HYPERVISOR: exec_cmd: nio delete udp-ceffd472-d739-4ed2-84f1-589f1ea02995 
+Jun 10 18:28:43.601 HYPERVISOR: exec_cmd: nio create_udp udp-14cd5100-27ce-4a9e-9cf5-720c785d8934 10004 127.0.0.1 10005 
+Jun 10 18:28:43.601 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 0 udp-14cd5100-27ce-4a9e-9cf5-720c785d8934 
+Jun 10 18:28:43.601 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:30:09.221 HYPERVISOR: exec_cmd: nio create_udp udp-5fc13e54-ff66-4a31-8f81-872c1c22af47 10008 127.0.0.1 10009 
+Jun 10 18:30:09.227 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 1 udp-5fc13e54-ff66-4a31-8f81-872c1c22af47 
+Jun 10 18:30:09.228 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:30:48.949 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Jun 10 18:30:48.965 HYPERVISOR: exec_cmd: vm set_ghost_file R2 C:\Users\ORTIZ\GNS3\projects\IPV6_LuisOrtiz\project-files\dynamips\c3640-ik9s-mz.124-16.image-192.ghost 
+Jun 10 18:30:48.965 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:30:48.981 HYPERVISOR: exec_cmd: vm set_config R2 configs\i2_startup-config.cfg 
+Jun 10 18:30:48.981 HYPERVISOR: exec_cmd: vm start R2 
+Jun 10 18:39:21.300 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:39:21.300 HYPERVISOR: exec_cmd: vm stop R2 
+Jun 10 18:39:21.487 VM: VM R2 shutdown.
+Jun 10 18:39:21.487 HYPERVISOR: exec_cmd: vm extract_config R2 
+Jun 10 18:39:26.890 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Jun 10 18:39:26.894 HYPERVISOR: exec_cmd: vm set_ghost_file R2 C:\Users\ORTIZ\GNS3\projects\IPV6_LuisOrtiz\project-files\dynamips\c3640-ik9s-mz.124-16.image-192.ghost 
+Jun 10 18:39:26.894 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 10 18:39:26.902 HYPERVISOR: exec_cmd: vm set_config R2 configs\i2_startup-config.cfg 
+Jun 10 18:39:26.902 HYPERVISOR: exec_cmd: vm start R2 
