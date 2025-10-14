@@ -95,7 +95,6 @@
 
     /* HERO */
     .hero{
-      
       height: 100vh;
       display: flex;
       align-items: center;
@@ -107,14 +106,9 @@
         url('images/logotipo.jpg') no-repeat center center/cover;
       color: white;
       margin-top: 64px;
-      
-      
-      
     }
     .hero-text{ position: relative; z-index: 2; max-width: 1100px; }
-    
 
-    /* Nuevo estilo para el título */
     .titulo-ronvel{
       font-family: 'Merriweather', serif;
       font-size: clamp(2.8rem, 6vw, 4rem);
@@ -176,10 +170,11 @@
       text-shadow: 0 4px 14px rgba(0,0,0,0.4);
     }
 
+    /* FONDO GENERAL ELEGANTE */
     .bg-elegante{
       position: relative;
       color: var(--texto-claro);
-      background: url('images/foto2.jpg') no-repeat center center/cover;
+      background: url('images/font.jpg') no-repeat center center/cover;
       overflow: hidden;
     }
     .bg-elegante::before{
@@ -190,6 +185,22 @@
       z-index: 0;
     }
     .bg-elegante > *{ position: relative; z-index: 1; }
+
+    /* Fondo para Nosotros */
+    .bg-nosotros{
+      position: relative;
+      color: var(--texto-claro);
+      background: url('images/foto2.jpg') no-repeat center center/cover;
+      overflow: hidden;
+    }
+    .bg-nosotros::before{
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(8,12,18,0.88);
+      z-index: 0;
+    }
+    .bg-nosotros > *{ position: relative; z-index: 1; }
 
     /* ----------- NOSOTROS ----------- */
     .nosotros{
@@ -203,16 +214,11 @@
       width: 380px;
       height: 260px;
       object-fit: cover;
-      object-position: center;
       border-radius: 14px;
       box-shadow: 0 10px 28px rgba(0,0,0,0.55);
-
-      /* animación */
       opacity: 0;
       transform: scale(0.9) translateY(40px);
       transition: all 0.9s ease;
-
-      /* marco elegante */
       border: 3px solid rgba(255, 215, 0, 0.7);
       outline: 2px solid rgba(255, 255, 255, 0.25);
       outline-offset: -6px;
@@ -244,58 +250,38 @@
       border: 1px solid rgba(255,255,255,0.08);
       box-shadow: 0 12px 30px rgba(0,0,0,0.45);
       backdrop-filter: blur(6px);
-      transition: transform .22s ease, box-shadow .22s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     }
-    .servicio{
-  width: 260px;
-  padding: 22px;
-  border-radius: 14px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
-  backdrop-filter: blur(6px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-}
-
-.servicio:hover{
-  transform: translateY(-8px) scale(1.03); /* ligero zoom + elevación */
-  box-shadow: 0 20px 46px rgba(0,0,0,0.55);
-  background: rgba(255,255,255,0.12); /* cambio de fondo más visible */
-}
-
-.servicio img{
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 12px;
-  transition: transform 0.3s ease;
-}
-
-.servicio:hover img{
-  transform: scale(1.05); /* imagen también hace un pequeño zoom al pasar el mouse */
-}
-
-.servicio h3{
-  margin-bottom: 8px;
-  color: var(--amarillo);
-  transition: color 0.3s ease;
-}
-
-.servicio:hover h3{
-  color: #ffd60a; /* cambia ligeramente el tono del título al hover */
-}
-
-.servicio p{
-  color: #e8edf3;
-}
-
-.precio{
-  margin-top: 10px;
-  font-weight: 700;
-  color: #ffb703;
-}
-
+    .servicio:hover{
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 20px 46px rgba(0,0,0,0.55);
+      background: rgba(255,255,255,0.12);
+    }
+    .servicio img{
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      transition: transform 0.3s ease;
+    }
+    .servicio:hover img{
+      transform: scale(1.05);
+    }
+    .servicio h3{
+      margin-bottom: 8px;
+      color: var(--amarillo);
+      transition: color 0.3s ease;
+    }
+    .servicio:hover h3{
+      color: #ffd60a;
+    }
+    .servicio p{ color: #e8edf3; }
+    .precio{
+      margin-top: 10px;
+      font-weight: 700;
+      color: #ffb703;
+    }
 
     /* CONTACTO */
     .contacto p{ margin: 8px 0; color: #e8edf3; font-size: 1.03rem; }
@@ -304,7 +290,6 @@
     .redes{ margin-top: 18px; }
     .redes h3{ color: var(--amarillo); margin-bottom: 14px; font-size: 1.3rem; }
 
-    /* Redes sociales mejoradas */
     .redes a{
       display: inline-block;
       text-decoration: none;
@@ -386,20 +371,14 @@
     }
   </style>
 </head>
+
 <body>
 
   <nav>
-    <!-- Logo -->
     <a href="#inicio"><img src="images/ip.png" alt="Logo Ronvel" class="logo-nav"></a>
-    
-    <!-- Botón hamburguesa -->
     <div class="menu-toggle" id="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </div>
-
-    <!-- Enlaces -->
     <div class="nav-links" id="nav-links">
       <a href="#inicio">Inicio</a>
       <a href="#nosotros">Nosotros</a>
@@ -408,7 +387,6 @@
     </div>
   </nav>
 
-  <!-- HERO -->
   <section id="inicio" class="hero">
     <div class="hero-text">
       <h1 class="titulo-ronvel">Estación de Servicios Ronvel S.A.C</h1>
@@ -417,12 +395,12 @@
   </section>
 
   <!-- NOSOTROS -->
-  <section id="nosotros" class="bg-elegante">
+  <section id="nosotros" class="bg-nosotros">
     <h2>Nosotros</h2>
     <div class="nosotros">
       <img src="images/foto4.jpg" alt="Estación Ronvel">
       <p>En <strong>Estación de Servicio Ronvel S.A.C</strong> nos dedicamos a brindar combustibles de la más alta calidad, garantizando seguridad, confianza y atención rápida para todos nuestros clientes.  
-      Nuestra misión es mantener a Cajamarca en movimiento con energía limpia, eficiente y accesible.</p>
+      Nuestra misión es mantener a Cajabamba en movimiento con energía limpia, eficiente y accesible.</p>
     </div>
   </section>
 
@@ -448,16 +426,12 @@
         <p>Diésel de última tecnología que mejora la combustión, cuida los inyectores y asegura potencia con menor consumo y emisiones.</p>
         <div class="precio">S/ 16.99 por galón</div>
       </div>
-     
-      <!-- Nuevo servicio Minimarket -->
       <div class="servicio">
         <img src="images/mini.png" alt="Minimarket">
         <h3>Minimarket</h3>
         <p>Disfruta de un minimarket completo con snacks, bebidas frías, productos de primera necesidad y todo lo que hará tu viaje más cómodo y placentero.</p>
         <div class="precio">Variedad de precios</div>
       </div>
-
-      <!-- Nuevo servicio Lavado -->
       <div class="servicio">
         <img src="images/agua.jpg" alt="Lavado de autos">
         <h3>Lavado de Autos</h3>
@@ -466,70 +440,61 @@
       </div>
     </div>
   </section>
-  
 
   <!-- CONTACTO -->
   <section id="contacto" class="contacto bg-elegante">
     <h2>Contacto</h2>
-   <p class="direccion">
-  <strong>Dirección:</strong> 
-  <a href="https://maps.app.goo.gl/YEZAvnAZZ2j4PTA39" 
-     target="_blank" 
-     style="text-decoration:none; color:#ffffff; font-weight:600;">
-    Av. Principal 123, Cajabamba - Perú
-  </a>
-</p>
-
-    <p><strong>Teléfono:</strong> +51 918735</p>
-    <p><strong>Email:</strong> contacto@ronvelsan.com</p>
+    <p class="direccion">
+      <strong>Dirección:</strong> 
+      <a href="https://maps.app.goo.gl/YEZAvnAZZ2j4PTA39" 
+         target="_blank" 
+         style="text-decoration:none; color:#ffffff; font-weight:600;">
+        Av. Principal 123, Cajabamba - Perú
+      </a>
+    </p>
+    <p><strong>Teléfono:</strong> <a href="tel:+51976600643" style="color: white; text-decoration: none;">+51 976 600 643</a></p>
+    <p><strong>Email:</strong> estefany_roncal@hotmail.com</p>
     <div class="redes">
       <h3>Síguenos en:</h3>
       <a class="facebook" href="https://www.facebook.com/profile.php?id=100057400843223" target="_blank">Facebook</a>
-      <a class="whatsapp" href="https://wa.me/51987654321" target="_blank">WhatsApp</a>
+      <a class="whatsapp" href="https://wa.me/+51976600643" target="_blank">WhatsApp</a>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Estación de servicios Ronvel S.A.C - Todos los derechos reservados</p>
   </footer>
 
-  <!-- Script menú hamburguesa -->
-<!-- Script menú hamburguesa -->
-<script>
-  const menuToggle = document.getElementById("menu-toggle");
-  const navLinks = document.getElementById("nav-links");
-
-  // Abrir/cerrar menú al hacer clic en el ícono
-  menuToggle.addEventListener("click", (e) => {
-    e.stopPropagation(); // Evita que el clic se propague al document
-    navLinks.classList.toggle("active");
-  });
-
-  // Cerrar el menú si se hace clic fuera de él
-  document.addEventListener("click", (e) => {
-    // Si el menú está abierto y el clic no es sobre el menú ni sobre el toggle
-    if (navLinks.classList.contains("active") && 
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+    menuToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      navLinks.classList.toggle("active");
+    });
+    document.addEventListener("click", (e) => {
+      if (
+        navLinks.classList.contains("active") &&
         !navLinks.contains(e.target) &&
-        e.target !== menuToggle) {
-      navLinks.classList.remove("active");
-    }
-  });
-
-// Animación imagen "Nosotros"
-    const observer = new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          entry.target.classList.add("show");
-        }
+        e.target !== menuToggle
+      ) {
+        navLinks.classList.remove("active");
+      }
+    });
+    const links = document.querySelectorAll(".nav-links a");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("show");
       });
     }, { threshold: 0.3 });
-
     const imgNosotros = document.querySelector(".nosotros img");
     observer.observe(imgNosotros);
   </script>
 
-
 </body>
 </html>
-
